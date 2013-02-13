@@ -1,0 +1,25 @@
+
+a person is a thing.
+
+owns is onwards, subj a person, what a thing.
+
+wants is now, subj a person, do a exists.
+
+should is onwards, subj a person, do a exists.
+
+may is onwards, subj a person, do a exists.
+
+(should Person1, do (Exists1));
+(Exists1)
+->
+finish (should Person1, do (Exists1)).
+
+(wants Person1, do (Exists1));
+(may Person1, do (Exists1))
+->
+(Exists1).
+
+(wants Person1, do (Exists1));
+(should Person1, do (Exists1))
+->
+(Exists1).
