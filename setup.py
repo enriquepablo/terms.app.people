@@ -25,33 +25,29 @@ from setuptools import setup, find_packages
 VERSION = '0.1.0a1dev1'
 
 setup(
-    name = 'terms.robots',
+    name = 'terms.app.people',
     version = VERSION,
     author = 'Enrique Pérez Arnaud',
     author_email = 'enriquepablo@gmail.com',
     url = 'http://pypi.python.org/terms.core',
     license = 'GNU GENERAL PUBLIC LICENSE Version 3',
-    description = 'Serve terms through HTTP',
+    description = 'Access control plugin for terms.robots',
     long_description = (open('README.rst').read() +
                         '\n' + open('INSTALL.rst').read()) +
                         '\n' + open('SUPPORT.rst').read(),
 
     packages = find_packages(),
-    namespace_packages = ['terms'],
-    test_suite = 'nose.collector',
+    namespace_packages = ['terms', 'terms.app'],
     include_package_data = True,
 
     entry_points = {
-        'console_scripts': [
-            'serve = terms.robots.scripts.serve:main',
-        ],
     },
     tests_require = [
     ],
     extras_require = {
         },
     install_requires = [
-        'bottle',
         'Terms[PG]',
+        'terms.robots',
     ],
 )
