@@ -2,13 +2,18 @@
 Sqlalchemy models corresponding to
 nouns defined in the ontology.
 '''
+from colanderalchemy import Column
+from colanderalchemy import SQLAlchemyMapping
 
-from sqlalchemy import Column, String
+from sqlalchemy import String
 
-from terms.robots.schemata import Schema
+from terms.core.schemata import Schema
 
 
-class User(Schema):
+class Person(Schema):
 
     name = Column(String(20))
     surname = Column(String(20))
+
+
+person = SQLAlchemyMapping(Person)
